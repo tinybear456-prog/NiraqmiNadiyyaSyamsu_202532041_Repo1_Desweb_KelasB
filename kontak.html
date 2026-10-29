@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak - Pranata Mangsa</title>
+</head>
+<body>
+  <header>
+    <h1>Formulir Pengamatan Lapangan</h1>
+    <p>Bagikan tanda alam yang Anda temukan di daerah Anda</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="artikel.html">Artikel Mangsa</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Kirim Laporan Pengamatan</h2>
+      <p>Semua kolom bertanda wajib harus diisi sebelum formulir dikirim.</p>
+
+      <form action="index.html" method="get">
+        <fieldset>
+          <legend>Data Pengamat</legend>
+          <p>
+            <label for="nama">Nama lengkap:</label>
+            <input type="text" id="nama" name="nama" placeholder="Contoh: Budi Santoso" minlength="3" required>
+          </p>
+          <p>
+            <label for="email">Alamat email:</label>
+            <input type="email" id="email" name="email" placeholder="nama@contoh.com" required>
+          </p>
+          <p>
+            <label for="tanggal">Tanggal pengamatan:</label>
+            <input type="date" id="tanggal" name="tanggal" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Detail Pengamatan</legend>
+          <p>Jenis tanda alam yang diamati:</p>
+          <p>
+            <input type="radio" id="tanda-tumbuhan" name="tanda" value="tumbuhan" required>
+            <label for="tanda-tumbuhan">Tumbuhan</label>
+            <input type="radio" id="tanda-hewan" name="tanda" value="hewan">
+            <label for="tanda-hewan">Hewan</label>
+            <input type="radio" id="tanda-cuaca" name="tanda" value="cuaca">
+            <label for="tanda-cuaca">Cuaca</label>
+          </p>
+          <p>
+            <label for="mangsa">Mangsa yang diperkirakan:</label>
+            <select id="mangsa" name="mangsa" required>
+              <option value="">-- Pilih mangsa --</option>
+              <option value="kasa">Kasa</option>
+              <option value="karo">Karo</option>
+              <option value="katelu">Katelu</option>
+              <option value="kapat">Kapat</option>
+              <option value="kalima">Kalima</option>
+              <option value="kanem">Kanem</option>
+              <option value="kapitu">Kapitu</option>
+              <option value="kawolu">Kawolu</option>
+              <option value="kasanga">Kasanga</option>
+              <option value="kasadasa">Kasadasa</option>
+              <option value="dhesta">Dhesta</option>
+              <option value="saddha">Saddha</option>
+            </select>
+          </p>
+          <p>
+            <label for="catatan">Catatan pengamatan:</label><br>
+            <textarea id="catatan" name="catatan" rows="4" cols="40" maxlength="300" required></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <input type="checkbox" id="setuju" name="setuju" value="ya" required>
+          <label for="setuju">Saya menyatakan data ini berdasarkan pengamatan sendiri.</label>
+        </p>
+
+        <button type="submit">Kirim Laporan</button>
+        <button type="reset">Hapus Isian</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Proyek Praktikum Desain Web - Niraqmi Nadiyya Syamsu (202532041)</p>
+  </footer>
+</body>
+</html>
